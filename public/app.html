@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LinkedIn Outreach Dashboard</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">in</span> Outreach</div>
+    <button class="ghost" onclick="logout()">Logout</button>
+  </header>
+
+  <main>
+    <!-- STATS -->
+    <section class="stats" id="stats"></section>
+
+    <!-- FIND -->
+    <section class="finder">
+      <input id="skill" placeholder="Skill (e.g. web developer, shopify, logo designer)" value="web developer" />
+      <input id="count" type="number" min="5" max="20" value="10" />
+      <button id="findBtn" onclick="find()">🔍 Naye prospects laao</button>
+      <span class="muted" id="findMsg"></span>
+    </section>
+
+    <!-- TABS -->
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-f="todo">📋 Aaj ka kaam</button>
+      <button class="tab" data-f="waiting">⏳ Accept ka wait</button>
+      <button class="tab" data-f="accepted">✅ Accepted (message bhejo)</button>
+      <button class="tab" data-f="done">📨 Ho gaya</button>
+      <button class="tab" data-f="all">Sab</button>
+    </nav>
+
+    <section id="list" class="list"></section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
